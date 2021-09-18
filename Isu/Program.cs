@@ -1,4 +1,4 @@
-﻿namespace Isu
+namespace Isu
 {
     internal class Program
     {
