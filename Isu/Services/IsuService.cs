@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Isu.Classes;
@@ -8,6 +9,11 @@ namespace Isu.Services
     public class IsuService : IIsuService
     {
         private List<Course> _courses = new List<Course>();
+        public List<Course> GetCourses()
+        {
+            return _courses;
+        }
+
         public Group AddGroup(string name)
         {
             int courseNumber = int.Parse(name[2] + " ");
@@ -152,6 +158,9 @@ namespace Isu.Services
                             if (newGroup.Students.Count >= newGroup.MaxStudents)
                                 throw new IsuException("Maximum count of students in a Group");
                             newGroup.Students.Add(student);
+
+                            // forget change student's group
+                            student.GroupName = newGroup.GroupName;
                         }
                     }
                 }

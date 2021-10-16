@@ -5,6 +5,7 @@ namespace Isu.Services
 {
     public interface IIsuService
     {
+        List<Course> GetCourses();
         Group AddGroup(string name);
         Student AddStudent(Group group, string name);
 
