@@ -29,6 +29,7 @@ namespace Backups.Tests
             Assert.AreEqual(_backupManager.GetBackupJob().RestorePoints.Count, 2);
             Assert.AreEqual(_backupManager.GetBackupJob().RestorePoints[0].Storages.Count, 2);
             Assert.AreEqual(_backupManager.GetBackupJob().RestorePoints[1].Storages.Count, 1);
+            
         }
     }
 }
