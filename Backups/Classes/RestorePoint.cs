@@ -18,5 +18,11 @@ namespace Backups.Classes
         public DateTime RestorePointCreationTime { get; }
         public List<Storage> Storages { get; }
         public string RestorePointDirectory { get; set; }
+
+        public string GetInformation()
+        {
+            return $"ID: {Id} Creation Time: {RestorePointCreationTime} " +
+                   $"Count storages: {Storages.Count} Directory: {RestorePointDirectory}";
+        }
     }
 }
